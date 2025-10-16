@@ -4,10 +4,211 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ipogeo della Medusa • Arpi</title>
+  <meta name="description" content="Sito didattico e divulgativo sull'Ipogeo della Medusa di Arpi: storia, architettura, decorazioni, corredi e contesto della Daunia ellenistica." />
+  <style>
+    :root{
+      --ink:#0f172a; --muted:#475569; --bg:#ffffff; --card:#f8fafc;
+      --accent:#0ea5e9; --border:#e5e7eb;
+    }
+    html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:10}
+    .wrap{max-width:1100px;margin:auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    .nav h1{font-size:20px;margin:0}
+    .links a{margin:0 8px;font-size:14px}
+    section{padding:30px 0;border-top:1px solid var(--border)}
+    h2{font-size:28px;margin-top:0}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:12px}
+    .grid{display:grid;gap:12px}
+    .cols-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+    .figure img{width:100%;border-radius:8px}
+    .caption{font-size:13px;color:var(--muted);padding:4px 2px}
+    .btn{border:1px solid var(--border);background:#fff;padding:8px 12px;border-radius:8px;cursor:pointer}
+    .btn:hover{background:#f0f9ff}
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:20px}
+    .modal.open{display:flex}
+    .modal .inner{max-width:90vw;max-height:90vh;background:#000;border-radius:10px;overflow:auto}
+    .modal img,.modal iframe{width:100%;height:auto;display:block}
+  </style>
 </head>
 <body>
-  <h1>Ipogeo della Medusa – Arpi</h1>
-  <p>Versione completa con Modalità Agente integrata (ricerca immagini Wikimedia Commons).</p>
-  <p>Da caricare su GitHub Pages.</p>
+  <header>
+    <div class="wrap nav">
+      <h1>Ipogeo della Medusa • Arpi</h1>
+      <div class="links">
+        <a href="#introduzione">Cos'è</a>
+        <a href="#scoperta">Scoperta</a>
+        <a href="#architettura">Architettura</a>
+        <a href="#decorazioni">Decorazioni</a>
+        <a href="#contesto">Contesto</a>
+        <a href="#galleria">Galleria</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="hero">
+      <h2>Ipogeo della Medusa</h2>
+      <p>Una tomba monumentale sotterranea dell'antica Arpi (Foggia), con fronte tetrastila e frontone decorato dalla testa della Gorgone, simbolo apotropaico di protezione.</p>
+    </section>
+
+    <section id="introduzione">
+      <h2>Identificazione e cronologia</h2>
+      <p>L'Ipogeo della Medusa è una sepoltura gentilizia monumentale costruita in grandi blocchi di tufo, databile al III secolo a.C., durante la massima fioritura di Arpi. Il nome deriva dal rilievo con la testa di Medusa posto sul frontone d'ingresso.</p>
+      <div class="card"><b>Luogo:</b> Arpi (Foggia) · <b>Periodo:</b> III sec. a.C.</div>
+    </section>
+
+    <section id="scoperta">
+      <h2>Scoperta e recupero</h2>
+      <div class="card">1980: scoperta clandestina e saccheggio del corredo.</div>
+      <div class="card">1984: trafugamento del frontone con Gorgone e dei capitelli; recuperati dalla polizia.</div>
+      <div class="card">1989: scavo ufficiale e messa in sicurezza a cura della Soprintendenza (Marina Mazzei).</div>
+    </section>
+
+    <section id="architettura">
+      <h2>Architettura e spazi interni</h2>
+      <p>La tomba si compone di un <em>drómos</em> (corridoio d’accesso), un vestibolo e tre camere funerarie con letti in muratura. La camera centrale, di funzione cerimoniale, presenta pavimento in cocciopesto decorato.</p>
+      <div class="grid cols-3">
+        <figure class="figure" id="fig-frontone">
+          <img id="img-frontone" src="assets/medusa-frontone.jpg" alt="Frontone con Gorgone">
+          <figcaption class="caption">Frontone con Gorgoneion (inserisci immagine in assets/medusa-frontone.jpg)</figcaption>
+        </figure>
+        <figure class="figure" id="fig-mosaico">
+          <img id="img-mosaico" src="assets/mosaico-cocciopesto.jpg" alt="Mosaico in cocciopesto">
+          <figcaption class="caption">Mosaico in cocciopesto, camera centrale</figcaption>
+        </figure>
+        <figure class="figure" id="fig-capitelli">
+          <img id="img-capitelli" src="assets/capitelli-figurati.jpg" alt="Capitelli figurati">
+          <figcaption class="caption">Capitelli figurati della fronte tetrastila</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="decorazioni">
+      <h2>Decorazioni pittoriche</h2>
+      <p>Il vestibolo era decorato con pitture parietali rappresentanti scene simboliche del mondo dei morti, tra cui il mostro Cerbero e figure di accompagnamento del defunto. L’insieme richiama l’arte ellenistica di area macedone adattata alla tradizione arpena.</p>
+      <figure class="figure" id="fig-vestibolo">
+        <img id="img-vestibolo" src="assets/vestibolo-pitture.jpg" alt="Pitture del vestibolo">
+        <figcaption class="caption">Pitture del vestibolo (inserisci immagine in assets/vestibolo-pitture.jpg)</figcaption>
+      </figure>
+    </section>
+
+    <section id="contesto">
+      <h2>Arpi e la Daunia ellenistica</h2>
+      <p>Arpi, con la sua cinta muraria lunga circa 13 km, fu una delle più grandi città dell’Italia preromana. Nel III sec. a.C. divenne un centro aristocratico di cultura greco-italica, dove il lusso funerario testimoniava il prestigio delle élite locali.</p>
+    </section>
+
+    <section id="galleria">
+      <h2>Galleria</h2>
+      <div class="grid cols-3">
+        <figure class="figure" id="fig-ingresso">
+          <img id="img-ingresso" src="assets/ipogeo-ingresso.jpg" alt="Ingresso dell'ipogeo" data-modal="img">
+          <figcaption class="caption">Ingresso dell'Ipogeo (drómos)</figcaption>
+        </figure>
+        <figure class="figure" id="fig-camera">
+          <img id="img-camera" src="assets/ipogeo-camera.jpg" alt="Camera funeraria" data-modal="img">
+          <figcaption class="caption">Camera funeraria</figcaption>
+        </figure>
+        <figure class="figure" id="fig-pitture">
+          <img id="img-pitture" src="assets/ipogeo-pitture.jpg" alt="Pitture parietali" data-modal="img">
+          <figcaption class="caption">Pitture parietali</figcaption>
+        </figure>
+      </div>
+      <div class="card">
+        <b>Video</b><br>
+        <button class="btn" data-open-video data-src="https://www.youtube.com/embed/dQw4w9WgXcQ">Apri esempio video</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="wrap" id="agent">
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <div>
+        <b>Modalità agente</b><br>
+        <small>Ricerca automatica di immagini su Wikimedia Commons con citazione.</small>
+      </div>
+      <div>
+        <button class="btn" id="agentRun">Trova e inserisci immagini</button>
+        <button class="btn" id="agentReset">Ripristina segnaposto</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="inner">
+      <button class="btn" id="closeModal" style="position:absolute;top:10px;right:10px;z-index:10">Chiudi</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const modal=document.getElementById('modal'), modalBody=document.getElementById('modalBody'), closeModal=document.getElementById('closeModal');
+    document.querySelectorAll('[data-modal="img"]').forEach(img=>{
+      img.addEventListener('click',()=>{
+        modalBody.innerHTML=`<img src="${img.src}" alt="${img.alt}">`;
+        modal.classList.add('open');
+      });
+    });
+    closeModal.onclick=()=>modal.classList.remove('open');
+    modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+    document.querySelectorAll('[data-open-video]').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const src=btn.getAttribute('data-src');
+        modalBody.innerHTML=`<iframe src="${src}" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0"></iframe>`;
+        modal.classList.add('open');
+      });
+    });
+
+    // Modalità agente - cerca immagini Wikimedia Commons
+    const placeholders={
+      'img-frontone':'assets/medusa-frontone.jpg',
+      'img-mosaico':'assets/mosaico-cocciopesto.jpg',
+      'img-capitelli':'assets/capitelli-figurati.jpg',
+      'img-vestibolo':'assets/vestibolo-pitture.jpg',
+      'img-ingresso':'assets/ipogeo-ingresso.jpg',
+      'img-camera':'assets/ipogeo-camera.jpg',
+      'img-pitture':'assets/ipogeo-pitture.jpg'
+    };
+    async function commonsSearch(q){
+      const url=new URL('https://commons.wikimedia.org/w/api.php');
+      url.searchParams.set('origin','*');
+      url.searchParams.set('action','query');
+      url.searchParams.set('format','json');
+      url.searchParams.set('prop','imageinfo');
+      url.searchParams.set('iiprop','url|extmetadata');
+      url.searchParams.set('generator','search');
+      url.searchParams.set('gsrlimit','3');
+      url.searchParams.set('gsrsearch',q);
+      const r=await fetch(url); return r.json();
+    }
+    async function agentRun(){
+      const queries=['Ipogeo della Medusa Arpi','Arpi Foggia tomba Medusa','Arpi necropoli ipogeo'];
+      const results=[];
+      for(const q of queries){
+        try{const j=await commonsSearch(q);if(j?.query?.pages)results.push(...Object.values(j.query.pages));}catch(e){}
+      }
+      const pick=t=>results.find(p=>p.title.toLowerCase().includes(t));
+      const setImg=(id,page)=>{
+        if(!page||!page.imageinfo)return;
+        const info=page.imageinfo[0];const img=document.getElementById(id);
+        img.src=info.thumburl||info.url;img.removeAttribute('onerror');
+        const cap=img.parentElement.querySelector('.caption');
+        const author=info.extmetadata?.Artist?.value?.replace(/<[^>]+>/g,'')||'Wikimedia Commons';
+        if(cap)cap.innerHTML=cap.textContent+' — <a href="https://commons.wikimedia.org/wiki/'+encodeURIComponent(page.title)+'" target="_blank">'+author+'</a>';
+      };
+      setImg('img-frontone',pick('medusa'));
+      setImg('img-ingresso',pick('ipogeo'));
+      setImg('img-pitture',pick('pittura'));
+      setImg('img-mosaico',pick('mosaico'));
+    }
+    function agentReset(){
+      for(const [id,src] of Object.entries(placeholders)){
+        const img=document.getElementById(id); if(img)img.src=src;
+      }
+    }
+    document.getElementById('agentRun').onclick=agentRun;
+    document.getElementById('agentReset').onclick=agentReset;
+  </script>
 </body>
 </html>
