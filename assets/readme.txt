@@ -1,0 +1,1 @@
+Inserisci qui le immagini o lascia che la Modalità Agente le recuperi da Wikimedia Commons.
